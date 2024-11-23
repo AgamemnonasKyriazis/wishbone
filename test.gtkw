@@ -1,0 +1,61 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Sat Nov 23 21:22:26 2024
+[*]
+[dumpfile] "/home/menios/Desktop/wishbone/top_tb.vcd"
+[dumpfile_mtime] "Sat Nov 23 21:21:59 2024"
+[dumpfile_size] 133426
+[savefile] "/home/menios/Desktop/wishbone/test.gtkw"
+[timestart] 0
+[size] 2174 1321
+[pos] -38 -38
+*-16.200001 30000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top_tb.
+[treeopen] top_tb.slave_0.
+[sst_width] 278
+[signals_width] 293
+[sst_expanded] 1
+[sst_vpaned_height] 887
+@28
+top_tb.clk
+top_tb.req
+top_tb.we
+@22
+top_tb.wdata[31:0]
+top_tb.addr[31:0]
+top_tb.rdata[31:0]
+@28
+top_tb.gnt
+@200
+-master
+@420
+top_tb.master.state
+@200
+-
+@22
+top_tb.master.o_DATA[31:0]
+top_tb.master.o_ADDR[31:0]
+@28
+top_tb.master.o_WE
+@200
+-
+-slave
+@28
+[color] 2
+top_tb.slave_0.i_CYC
+[color] 2
+top_tb.slave_0.i_STB
+[color] 3
+top_tb.slave_0.o_ACK
+@200
+-ram
+@22
+top_tb.slave_0.block_ram.i_WDATA[31:0]
+top_tb.slave_0.block_ram.i_ADDR[31:0]
+@28
+top_tb.slave_0.block_ram.i_CE
+@22
+top_tb.slave_0.block_ram.i_WE[3:0]
+top_tb.slave_0.block_ram.o_RDATA[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
