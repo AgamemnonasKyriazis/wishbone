@@ -1,5 +1,5 @@
 $date
-	Sun Nov 24 01:21:17 2024
+	Sun Nov 24 13:02:57 2024
 $end
 $version
 	Icarus Verilog
@@ -51,68 +51,67 @@ $var reg 4 @ o_SEL [3:0] $end
 $var reg 1 $ o_STB $end
 $var reg 1 # o_WE $end
 $var reg 1 A we $end
-$var integer 32 B next_state [31:0] $end
-$var integer 32 C state [31:0] $end
+$var integer 32 B state [31:0] $end
 $upscope $end
 $scope module slave_0 $end
-$var wire 32 D i_ADDR [31:0] $end
+$var wire 32 C i_ADDR [31:0] $end
 $var wire 1 . i_CLK $end
 $var wire 1 ( i_CYC $end
-$var wire 32 E i_DATA [31:0] $end
+$var wire 32 D i_DATA [31:0] $end
 $var wire 1 0 i_RST $end
-$var wire 4 F i_SEL [3:0] $end
+$var wire 4 E i_SEL [3:0] $end
 $var wire 1 $ i_STB $end
-$var wire 1 G i_TAGN $end
+$var wire 1 F i_TAGN $end
 $var wire 1 # i_WE $end
-$var wire 1 H o_TAGN $end
-$var wire 1 I ram_valid $end
-$var wire 32 J ram_rdata [31:0] $end
-$var parameter 32 K ADDR_WIDTH $end
-$var parameter 32 L DATA_WIDTH $end
-$var reg 1 M ack $end
+$var wire 1 G o_TAGN $end
+$var wire 1 H ram_valid $end
+$var wire 32 I ram_rdata [31:0] $end
+$var parameter 32 J ADDR_WIDTH $end
+$var parameter 32 K DATA_WIDTH $end
+$var reg 1 L ack $end
 $var reg 1 * o_ACK $end
-$var reg 32 N o_DATA [31:0] $end
-$var reg 32 O ram_addr [31:0] $end
-$var reg 1 P ram_ce $end
-$var reg 32 Q ram_wdata [31:0] $end
-$var reg 4 R ram_we [3:0] $end
-$var reg 1 S valid_cycle $end
-$var reg 1 T valid_req $end
+$var reg 32 M o_DATA [31:0] $end
+$var reg 32 N ram_addr [31:0] $end
+$var reg 1 O ram_ce $end
+$var reg 32 P ram_wdata [31:0] $end
+$var reg 4 Q ram_we [3:0] $end
+$var reg 1 R valid_cycle $end
+$var reg 1 S valid_req $end
 $scope module block_ram $end
-$var wire 32 U i_ADDR [31:0] $end
-$var wire 1 P i_CE $end
+$var wire 32 T i_ADDR [31:0] $end
+$var wire 1 O i_CE $end
 $var wire 1 . i_CLK $end
-$var wire 32 V i_WDATA [31:0] $end
-$var wire 4 W i_WE [3:0] $end
-$var parameter 32 X ADDR_WIDTH $end
-$var parameter 32 Y BYTE_WIDTH $end
-$var parameter 32 Z DATA_WIDTH $end
-$var parameter 32 [ N_COLS $end
-$var parameter 32 \ SRAM_DEPTH $end
-$var reg 32 ] o_RDATA [31:0] $end
-$var reg 1 I o_VALID $end
+$var wire 32 U i_WDATA [31:0] $end
+$var wire 4 V i_WE [3:0] $end
+$var parameter 32 W ADDR_WIDTH $end
+$var parameter 32 X BYTE_WIDTH $end
+$var parameter 32 Y DATA_WIDTH $end
+$var parameter 32 Z N_COLS $end
+$var parameter 32 [ SRAM_DEPTH $end
+$var reg 32 \ o_RDATA [31:0] $end
+$var reg 1 H o_VALID $end
 $scope begin genblk1[0] $end
-$var parameter 2 ^ i $end
+$var parameter 2 ] i $end
 $scope begin MEMORY_WRITE $end
 $upscope $end
 $upscope $end
 $scope begin genblk1[1] $end
-$var parameter 2 _ i $end
+$var parameter 2 ^ i $end
 $scope begin MEMORY_WRITE $end
 $upscope $end
 $upscope $end
 $scope begin genblk1[2] $end
-$var parameter 3 ` i $end
+$var parameter 3 _ i $end
 $scope begin MEMORY_WRITE $end
 $upscope $end
 $upscope $end
 $scope begin genblk1[3] $end
-$var parameter 3 a i $end
+$var parameter 3 ` i $end
 $scope begin MEMORY_WRITE $end
 $upscope $end
 $upscope $end
 $scope begin $unm_blk_3 $end
-$var integer 32 b i [31:0] $end
+$var integer 32 a i [31:0] $end
 $upscope $end
 $scope begin MEMORY_READ $end
 $upscope $end
@@ -122,48 +121,47 @@ $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b11 a
-b10 `
-b1 _
-b0 ^
-b10000000000 \
-b100 [
-b100000 Z
-b1000 Y
-b100000 X
-b100000 L
+b11 `
+b10 _
+b1 ^
+b0 ]
+b10000000000 [
+b100 Z
+b100000 Y
+b1000 X
+b100000 W
 b100000 K
+b100000 J
 b100000 ;
 b100000 :
 $end
 #0
 $dumpvars
-b10000000000 b
-bx ]
-b0 W
-b0 V
-b0 U
-0T
-0S
-b0 R
-b0 Q
-0P
-b0 O
-b0 N
-0M
-bx J
-xI
-zH
+b10000000000 a
+bx \
+bx V
+bx U
+bx T
+xS
+xR
+bx Q
+bx P
+xO
+bx N
+b0 M
+0L
+bx I
+xH
 zG
-b0 F
-b0 E
-b0 D
-b0 C
+zF
+bx E
+bx D
+bx C
 b0 B
 xA
-b0 @
-b0 ?
-b0 >
+bx @
+bx ?
+bx >
 bx =
 bx <
 b0 9
@@ -182,21 +180,42 @@ b0 -
 0,
 b0 +
 0*
-b0 )
-0(
-b0 '
+bx )
+x(
+bx '
 b0 &
-b0 %
-0$
-0#
+bx %
+x$
+x#
 0"
-1!
+x!
 $end
 #10000
-b1 B
-b0 J
-b0 ]
-0I
+1!
+0O
+b0 P
+b0 U
+b0 N
+b0 T
+b0 Q
+b0 V
+0S
+0R
+b0 I
+b0 \
+b0 '
+b0 ?
+b0 D
+b0 )
+b0 >
+b0 C
+0#
+b0 %
+b0 @
+b0 E
+0$
+0(
+0H
 13
 b10001001000100011001101000100 2
 b10001001000100011001101000100 6
@@ -207,28 +226,10 @@ b10001001000100011001101000100 6
 #20000
 0.
 #30000
-0!
-1P
-b10001001000100011001101000100 Q
-b10001001000100011001101000100 V
-b1111 R
-b1111 W
-1T
-1S
-b10001001000100011001101000100 '
-b10001001000100011001101000100 ?
-b10001001000100011001101000100 E
-1#
-b1111 %
-b1111 @
-b1111 F
-1$
-1(
-b10 B
+b1 B
 1A
 b10001001000100011001101000100 =
 b0 <
-b1 C
 03
 b0 2
 b0 6
@@ -237,55 +238,79 @@ b0 6
 #40000
 0.
 #50000
-1!
-1"
-b0 B
-0P
-1,
-1*
-1M
-b10 C
-1I
+0!
+1O
+b10001001000100011001101000100 P
+b10001001000100011001101000100 U
+b1111 Q
+b1111 V
+1S
+1R
+b10001001000100011001101000100 '
+b10001001000100011001101000100 ?
+b10001001000100011001101000100 D
+1#
+b1111 %
+b1111 @
+b1111 E
+1$
+1(
+b10 B
 1.
 #60000
 0.
 #70000
-0"
-0,
-0*
-b0 Q
-b0 V
-b0 R
-b0 W
-0M
-0T
-0S
-b0 '
-b0 ?
-b0 E
-0#
-b0 %
-b0 @
-b0 F
-0$
-0(
-0I
-b0 C
-11
+1!
+1"
+1,
+1*
+0O
+1L
+1H
+b10001001000100011001101000100 '
+b10001001000100011001101000100 ?
+b10001001000100011001101000100 D
+1#
+b1111 %
+b1111 @
+b1111 E
+1$
+1(
 1.
 #80000
 0.
 #90000
-01
+0"
+0,
+0*
+b0 P
+b0 U
+b0 Q
+b0 V
+0L
+0S
+0R
+b0 B
+b0 '
+b0 ?
+b0 D
+0#
+b0 %
+b0 @
+b0 E
+0$
+0(
+0H
+11
 1.
 #100000
 0.
 #110000
+01
 1.
 #120000
 0.
 #130000
-b1 B
 13
 b1 -
 b1 5
@@ -296,32 +321,9 @@ b1010101011001100111011110001000 6
 #140000
 0.
 #150000
-0!
-1P
-b1010101011001100111011110001000 Q
-b1010101011001100111011110001000 V
-b1 O
-b1 U
-b1111 R
-b1111 W
-1T
-1S
-b1010101011001100111011110001000 '
-b1010101011001100111011110001000 ?
-b1010101011001100111011110001000 E
-b1 )
-b1 >
-b1 D
-1#
-b1111 %
-b1111 @
-b1111 F
-1$
-1(
-b10 B
+b1 B
 b1010101011001100111011110001000 =
 b1 <
-b1 C
 03
 b0 -
 b0 5
@@ -332,134 +334,169 @@ b0 6
 #160000
 0.
 #170000
-1!
-1"
-b0 B
-0P
-1,
-1*
-1M
-b10 C
-1I
+0!
+1O
+b1010101011001100111011110001000 P
+b1010101011001100111011110001000 U
+b1 N
+b1 T
+b1111 Q
+b1111 V
+1S
+1R
+b1010101011001100111011110001000 '
+b1010101011001100111011110001000 ?
+b1010101011001100111011110001000 D
+b1 )
+b1 >
+b1 C
+1#
+b1111 %
+b1111 @
+b1111 E
+1$
+1(
+b10 B
 1.
 #180000
 0.
 #190000
-0"
-0,
-0*
-b0 Q
-b0 V
-b0 O
-b0 U
-b0 R
-b0 W
-0M
-0T
-0S
-b0 '
-b0 ?
-b0 E
-b0 )
-b0 >
-b0 D
-0#
-b0 %
-b0 @
-b0 F
-0$
-0(
-0I
-b0 C
-11
+1!
+1"
+1,
+1*
+0O
+1L
+1H
+b1010101011001100111011110001000 '
+b1010101011001100111011110001000 ?
+b1010101011001100111011110001000 D
+b1 )
+b1 >
+b1 C
+1#
+b1111 %
+b1111 @
+b1111 E
+1$
+1(
 1.
 #200000
 0.
 #210000
-01
+0"
+0,
+0*
+b0 P
+b0 U
+b0 N
+b0 T
+b0 Q
+b0 V
+0L
+0S
+0R
+b0 B
+b0 '
+b0 ?
+b0 D
+b0 )
+b0 >
+b0 C
+0#
+b0 %
+b0 @
+b0 E
+0$
+0(
+0H
+11
 1.
 #220000
 0.
 #230000
+01
 1.
 #240000
 0.
 #250000
-b1 B
 1/
 1.
 #260000
 0.
 #270000
-0!
-1P
-1T
-1S
-b1111 %
-b1111 @
-b1111 F
-1$
-1(
-b10 B
+b1 B
 0A
 b0 =
 b0 <
-b1 C
 0/
 1.
 #280000
 0.
 #290000
-1!
-1"
-b0 B
-0P
-1,
-1*
-1M
-b10001001000100011001101000100 +
-b10001001000100011001101000100 8
-b10001001000100011001101000100 &
-b10001001000100011001101000100 9
-b10001001000100011001101000100 N
-b10001001000100011001101000100 J
-b10001001000100011001101000100 ]
-b10 C
-1I
+0!
+1O
+1S
+1R
+b1111 %
+b1111 @
+b1111 E
+1$
+1(
+b10 B
 1.
 #300000
 0.
 #310000
-0"
-0,
-0*
-0M
-0T
-0S
-b0 +
-b0 8
-b0 &
-b0 9
-b0 N
-b0 %
-b0 @
-b0 F
-0$
-0(
-b0 J
-b0 ]
-0I
-b0 C
-11
+1!
+1"
+b10001001000100011001101000100 +
+b10001001000100011001101000100 8
+b10001001000100011001101000100 &
+b10001001000100011001101000100 9
+b10001001000100011001101000100 M
+1,
+1*
+0O
+1L
+b10001001000100011001101000100 I
+b10001001000100011001101000100 \
+1H
+b1111 %
+b1111 @
+b1111 E
+1$
+1(
 1.
 #320000
 0.
 #330000
-01
+0"
+0,
+0*
+0L
+0S
+0R
+b0 +
+b0 8
+b0 &
+b0 9
+b0 M
+b0 I
+b0 \
+b0 B
+b0 %
+b0 @
+b0 E
+0$
+0(
+0H
+11
 1.
 #340000
 0.
 #350000
+01
 1.
 #360000
 0.

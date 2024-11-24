@@ -30,15 +30,6 @@ typedef enum {
 } state_t;
 
 state_t state;
-state_t next_state;
-
-
-always_ff @(posedge i_CLK) begin
-    if (i_RST)
-        state <= IDLE;
-    else
-        state <= next_state;
-end
 
 reg [ADDR_WIDTH-1:0] addr;
 reg [DATA_WIDTH-1:0] data;
@@ -51,42 +42,48 @@ always_ff @(posedge i_CLK) begin
     end
 end
 
-always_comb begin    
-    case (state)
-    IDLE : begin
-        o_CYC = 1'b0;
-        o_STB = 1'b0;
-        o_SEL = 4'b0000;
-        o_WE  = 1'b0;
-        o_ADDR = 0;
-        o_DATA = 0;
-    end
-    TRANS, WAIT_ACK : begin
-        o_CYC = 1'b1;
-        o_STB = 1'b1;
-        o_SEL = 4'b1111;
-        o_WE  = we;
-        o_ADDR = addr;
-        o_DATA = data;
-    end
-    endcase
-end
+always_ff @(posedge i_CLK) begin
+    
+    o_CYC  <= 1'b0;
+    o_STB  <= 1'b0;
+    o_SEL  <= 4'b0000;
+    o_WE   <= 1'b0;
+    o_ADDR <= 0;
+    o_DATA <= 0;
 
-always_comb begin
-    case (state)
-    IDLE : begin
-        if (i_req)
-            next_state = TRANS;
+    if (i_RST) begin
+        state <= IDLE;
     end
-    TRANS, WAIT_ACK : begin
-        next_state = WAIT_ACK;
-        if (i_ACK)
-            next_state = IDLE;
+    else begin       
+        case (state)
+        IDLE : begin
+            if (i_req) begin
+                state <= TRANS;
+            end
+        end
+        TRANS, WAIT_ACK : begin
+            state <= WAIT_ACK;
+            o_CYC  <= 1'b1;
+            o_STB  <= 1'b1;
+            o_SEL  <= 4'b1111;
+            o_WE   <= we;
+            o_ADDR <= addr;
+            o_DATA <= data;
+            if (i_ACK) begin
+                state <= IDLE;
+                o_CYC  <= 1'b0;
+                o_STB  <= 1'b0;
+                o_SEL  <= 4'b0000;
+                o_WE   <= 1'b0;
+                o_ADDR <= 0;
+                o_DATA <= 0;            
+            end
+        end
+        default : begin
+            state <= IDLE;
+        end
+        endcase
     end
-    default : begin
-        next_state = IDLE;
-    end
-    endcase
 end
 
 assign o_gnt = i_ACK;
